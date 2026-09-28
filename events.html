@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> CampusConnect
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html" class="btn btn-primary">Explore Events</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div style="background-color: var(--primary-color); padding: 4rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 1rem;">Explore Campus Events</h1>
+            <p style="color: var(--accent-color); font-size: 1.125rem; max-width: 600px; margin: 0 auto;">Discover hackathons, workshops, fests, and meetups happening around you.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            
+            <!-- Search & Filters -->
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search events by name, location, or keyword...">
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="technology">Technology</button>
+                    <button class="filter-btn" data-filter="entrepreneurship">Entrepreneurship</button>
+                    <button class="filter-btn" data-filter="cultural">Cultural</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                    <button class="filter-btn" data-filter="workshop">Workshop</button>
+                </div>
+            </div>
+
+            <!-- Event Cards Grid -->
+            <div class="grid grid-4">
+                
+                <div class="card filterable-item" data-category="technology">
+                    <div class="card-img">
+                        <span class="badge">Technology</span>
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Campus Hackathon 2026</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Oct 12, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 09:00 AM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Innovation Lab</div>
+                        <p class="card-desc">48-hour coding marathon to build impactful solutions.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card filterable-item" data-category="workshop">
+                    <div class="card-img">
+                        <span class="badge">Workshop</span>
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">AI & Future Tech</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Oct 18, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 02:00 PM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Seminar Hall</div>
+                        <p class="card-desc">Deep dive into Generative AI and ML fundamentals.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card filterable-item" data-category="entrepreneurship">
+                    <div class="card-img">
+                        <span class="badge">Entrepreneurship</span>
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Startup Summit</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Oct 25, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 10:00 AM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Main Auditorium</div>
+                        <p class="card-desc">Pitch ideas and network with angel investors.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card filterable-item" data-category="cultural">
+                    <div class="card-img">
+                        <span class="badge">Cultural</span>
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Annual Fest: Euphoria</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Nov 05, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 05:00 PM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Open Grounds</div>
+                        <p class="card-desc">Music, dance, and art. The biggest cultural event of the year.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card filterable-item" data-category="sports">
+                    <div class="card-img">
+                        <span class="badge">Sports</span>
+                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Inter-College Athletics</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Nov 12, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 08:00 AM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Sports Complex</div>
+                        <p class="card-desc">Compete in track and field events with other colleges.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card filterable-item" data-category="technology">
+                    <div class="card-img">
+                        <span class="badge">Technology</span>
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cyber Security Meetup</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Nov 18, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 04:00 PM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> IT Block, Room 301</div>
+                        <p class="card-desc">Learn about ethical hacking and network security.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card filterable-item" data-category="workshop">
+                    <div class="card-img">
+                        <span class="badge">Workshop</span>
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Resume Building 101</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Nov 20, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 01:00 PM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Career Center</div>
+                        <p class="card-desc">Craft a resume that stands out to recruiters.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card filterable-item" data-category="cultural">
+                    <div class="card-img">
+                        <span class="badge">Cultural</span>
+                        <img src="https://images.unsplash.com/photo-1516280440502-869894e63b15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Event">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Photography Exhibition</h3>
+                        <div class="card-meta"><i class="far fa-calendar-alt"></i> Dec 02, 2026</div>
+                        <div class="card-meta"><i class="far fa-clock"></i> 10:00 AM</div>
+                        <div class="card-meta"><i class="fas fa-map-marker-alt"></i> Central Library</div>
+                        <p class="card-desc">Showcase of the best shots by the Photography Club.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i> CampusConnect
+                </a>
+                <p>The ultimate student-focused portal to discover events, internships, and communities on campus.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li><a href="clubs.html">Clubs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Global Modal Placeholder -->
+    <div class="modal" id="customModal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal"></i>
+            <h3 id="modalTitle" style="margin-bottom: 1rem;">Modal Title</h3>
+            <div id="modalBody">Modal content goes here.</div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

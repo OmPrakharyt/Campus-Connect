@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .opp-card {
+            display: flex;
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .opp-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+        }
+        .opp-icon {
+            width: 60px;
+            height: 60px;
+            background: #eef2ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        .opp-content {
+            flex-grow: 1;
+        }
+        .opp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        .opp-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .opp-org {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .opp-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .opp-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        .opp-skills {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .skill-tag {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-dark);
+        }
+        @media (max-width: 768px) {
+            .opp-card { flex-direction: column; }
+            .opp-icon { margin-bottom: 1rem; }
+            .opp-header { flex-direction: column; gap: 0.5rem; }
+            .opp-badge { align-self: flex-start; }
+            .opp-meta { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> CampusConnect
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html" class="btn btn-primary">Explore Events</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div style="background-color: var(--primary-color); padding: 4rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 1rem;">Opportunities That Help You Grow</h1>
+            <p style="color: var(--accent-color); font-size: 1.125rem; max-width: 600px; margin: 0 auto;">Find internships, scholarships, and competitions to kickstart your career.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search opportunities by title, company, or skills...">
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="internship">Internships</button>
+                    <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+                    <button class="filter-btn" data-filter="scholarship">Scholarships</button>
+                    <button class="filter-btn" data-filter="competition">Competitions</button>
+                </div>
+            </div>
+
+            <div class="opportunities-list mt-4">
+                
+                <!-- Opp 1 -->
+                <div class="opp-card filterable-item" data-category="internship">
+                    <div class="opp-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="opp-content">
+                        <div class="opp-header">
+                            <div>
+                                <h3 class="opp-title">Software Engineering Internship</h3>
+                                <div class="opp-org">TechCorp Inc.</div>
+                            </div>
+                            <span class="opp-badge">Internship</span>
+                        </div>
+                        <p class="mt-2" style="font-size: 0.95rem;">Join our backend team for a 3-month summer internship building scalable APIs.</p>
+                        <div class="opp-skills">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                        <div class="opp-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Remote / Hybrid</span>
+                            <span><i class="far fa-calendar-alt"></i> Deadline: Nov 15, 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; padding-left: 1rem;">
+                        <a href="#" class="btn btn-outline">View Opportunity</a>
+                    </div>
+                </div>
+
+                <!-- Opp 2 -->
+                <div class="opp-card filterable-item" data-category="internship">
+                    <div class="opp-icon"><i class="fas fa-robot"></i></div>
+                    <div class="opp-content">
+                        <div class="opp-header">
+                            <div>
+                                <h3 class="opp-title">AI/ML Internship</h3>
+                                <div class="opp-org">DeepVision Labs</div>
+                            </div>
+                            <span class="opp-badge">Internship</span>
+                        </div>
+                        <p class="mt-2" style="font-size: 0.95rem;">Work on cutting-edge computer vision models for autonomous vehicles.</p>
+                        <div class="opp-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">OpenCV</span>
+                        </div>
+                        <div class="opp-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
+                            <span><i class="far fa-calendar-alt"></i> Deadline: Nov 30, 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; padding-left: 1rem;">
+                        <a href="#" class="btn btn-outline">View Opportunity</a>
+                    </div>
+                </div>
+
+                <!-- Opp 3 -->
+                <div class="opp-card filterable-item" data-category="hackathon">
+                    <div class="opp-icon"><i class="fas fa-code"></i></div>
+                    <div class="opp-content">
+                        <div class="opp-header">
+                            <div>
+                                <h3 class="opp-title">Campus Hackathon</h3>
+                                <div class="opp-org">University Tech Council</div>
+                            </div>
+                            <span class="opp-badge">Hackathon</span>
+                        </div>
+                        <p class="mt-2" style="font-size: 0.95rem;">Compete to build tech solutions for local community problems. $5000 prize pool.</p>
+                        <div class="opp-skills">
+                            <span class="skill-tag">Web Dev</span>
+                            <span class="skill-tag">App Dev</span>
+                            <span class="skill-tag">Design</span>
+                        </div>
+                        <div class="opp-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Campus Library</span>
+                            <span><i class="far fa-calendar-alt"></i> Deadline: Oct 10, 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; padding-left: 1rem;">
+                        <a href="#" class="btn btn-outline">View Opportunity</a>
+                    </div>
+                </div>
+
+                <!-- Opp 4 -->
+                <div class="opp-card filterable-item" data-category="competition">
+                    <div class="opp-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="opp-content">
+                        <div class="opp-header">
+                            <div>
+                                <h3 class="opp-title">Startup Challenge</h3>
+                                <div class="opp-org">E-Cell Incubator</div>
+                            </div>
+                            <span class="opp-badge">Competition</span>
+                        </div>
+                        <p class="mt-2" style="font-size: 0.95rem;">Pitch your startup idea to a panel of investors and win seed funding up to $10,000.</p>
+                        <div class="opp-skills">
+                            <span class="skill-tag">Entrepreneurship</span>
+                            <span class="skill-tag">Pitching</span>
+                            <span class="skill-tag">Business Plan</span>
+                        </div>
+                        <div class="opp-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Main Auditorium</span>
+                            <span><i class="far fa-calendar-alt"></i> Deadline: Oct 20, 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; padding-left: 1rem;">
+                        <a href="#" class="btn btn-outline">View Opportunity</a>
+                    </div>
+                </div>
+
+                <!-- Opp 5 -->
+                <div class="opp-card filterable-item" data-category="internship">
+                    <div class="opp-icon"><i class="fas fa-paint-brush"></i></div>
+                    <div class="opp-content">
+                        <div class="opp-header">
+                            <div>
+                                <h3 class="opp-title">Web Development Internship</h3>
+                                <div class="opp-org">Creative Agency X</div>
+                            </div>
+                            <span class="opp-badge">Internship</span>
+                        </div>
+                        <p class="mt-2" style="font-size: 0.95rem;">Front-end focused role creating interactive and animated web experiences.</p>
+                        <div class="opp-skills">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                        <div class="opp-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                            <span><i class="far fa-calendar-alt"></i> Deadline: Dec 01, 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; padding-left: 1rem;">
+                        <a href="#" class="btn btn-outline">View Opportunity</a>
+                    </div>
+                </div>
+
+                <!-- Opp 6 -->
+                <div class="opp-card filterable-item" data-category="scholarship">
+                    <div class="opp-icon"><i class="fas fa-award"></i></div>
+                    <div class="opp-content">
+                        <div class="opp-header">
+                            <div>
+                                <h3 class="opp-title">Women in Tech Scholarship</h3>
+                                <div class="opp-org">Global Tech Foundation</div>
+                            </div>
+                            <span class="opp-badge">Scholarship</span>
+                        </div>
+                        <p class="mt-2" style="font-size: 0.95rem;">Financial support for female students pursuing degrees in computer science and engineering.</p>
+                        <div class="opp-skills">
+                            <span class="skill-tag">Merit-based</span>
+                            <span class="skill-tag">Diversity</span>
+                        </div>
+                        <div class="opp-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Global (Online App)</span>
+                            <span><i class="far fa-calendar-alt"></i> Deadline: Dec 15, 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end; padding-left: 1rem;">
+                        <a href="#" class="btn btn-outline">View Opportunity</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i> CampusConnect
+                </a>
+                <p>The ultimate student-focused portal to discover events, internships, and communities on campus.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li><a href="clubs.html">Clubs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Global Modal Placeholder -->
+    <div class="modal" id="customModal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal"></i>
+            <h3 id="modalTitle" style="margin-bottom: 1rem;">Modal Title</h3>
+            <div id="modalBody">Modal content goes here.</div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

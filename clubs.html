@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs - CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .club-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            transition: var(--transition);
+        }
+        .club-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        .club-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+        }
+        .club-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .club-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+        }
+        .club-members {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .club-members i {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> CampusConnect
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html" class="btn btn-primary">Explore Events</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div style="background-color: var(--primary-color); padding: 4rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 1rem;">Find Your Community</h1>
+            <p style="color: var(--accent-color); font-size: 1.125rem; max-width: 600px; margin: 0 auto;">Join clubs and societies that align with your passions and interests.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3">
+                
+                <!-- Club 1 -->
+                <div class="club-card animate-on-scroll">
+                    <div class="club-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="club-name">Coding Club</h3>
+                    <p class="club-desc">A community of developers building open-source projects and practicing competitive programming.</p>
+                    <div class="club-members"><i class="fas fa-users"></i> 350+ Members</div>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Explore Club</a>
+                </div>
+
+                <!-- Club 2 -->
+                <div class="club-card animate-on-scroll">
+                    <div class="club-icon"><i class="fas fa-robot"></i></div>
+                    <h3 class="club-name">Robotics Club</h3>
+                    <p class="club-desc">Design, build, and program robots for national level robotics competitions.</p>
+                    <div class="club-members"><i class="fas fa-users"></i> 120+ Members</div>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Explore Club</a>
+                </div>
+
+                <!-- Club 3 -->
+                <div class="club-card animate-on-scroll">
+                    <div class="club-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="club-name">E-Cell</h3>
+                    <p class="club-desc">Fostering the spirit of entrepreneurship and supporting student-led startups on campus.</p>
+                    <div class="club-members"><i class="fas fa-users"></i> 200+ Members</div>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Explore Club</a>
+                </div>
+
+                <!-- Club 4 -->
+                <div class="club-card animate-on-scroll">
+                    <div class="club-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3 class="club-name">Design Club</h3>
+                    <p class="club-desc">For UI/UX enthusiasts, graphic designers, and animators looking to hone their craft.</p>
+                    <div class="club-members"><i class="fas fa-users"></i> 180+ Members</div>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Explore Club</a>
+                </div>
+
+                <!-- Club 5 -->
+                <div class="club-card animate-on-scroll">
+                    <div class="club-icon"><i class="fas fa-guitar"></i></div>
+                    <h3 class="club-name">Cultural Club</h3>
+                    <p class="club-desc">Showcase your talents in music, dance, theater, and fine arts. Organizers of the annual fest.</p>
+                    <div class="club-members"><i class="fas fa-users"></i> 400+ Members</div>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Explore Club</a>
+                </div>
+
+                <!-- Club 6 -->
+                <div class="club-card animate-on-scroll">
+                    <div class="club-icon"><i class="fas fa-camera"></i></div>
+                    <h3 class="club-name">Photography Club</h3>
+                    <p class="club-desc">Capturing campus life, conducting photowalks, and learning professional photography skills.</p>
+                    <div class="club-members"><i class="fas fa-users"></i> 90+ Members</div>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">Explore Club</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Don't see a club for your interest?</h2>
+            <p>You can always start your own! Gather a few friends and pitch your idea to the student council.</p>
+            <a href="contact.html" class="btn btn-secondary" style="color: var(--primary-color);">Contact Council</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i> CampusConnect
+                </a>
+                <p>The ultimate student-focused portal to discover events, internships, and communities on campus.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li><a href="clubs.html">Clubs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampusConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
